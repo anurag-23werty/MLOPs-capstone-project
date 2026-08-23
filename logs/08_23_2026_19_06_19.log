@@ -1,0 +1,8 @@
+[ 2026-08-23 19:06:20,798 ] httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2026-08-23 19:06:20,805 ] dagshub - INFO - Accessing as anurag-23werty
+[ 2026-08-23 19:06:22,126 ] httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/anurag-23werty/MLOPs-capstone-project "HTTP/1.1 200 OK"
+[ 2026-08-23 19:06:23,385 ] httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2026-08-23 19:06:23,389 ] dagshub - INFO - Initialized MLflow to track repo "anurag-23werty/MLOPs-capstone-project"
+[ 2026-08-23 19:06:23,389 ] dagshub - INFO - Repository anurag-23werty/MLOPs-capstone-project initialized!
+[ 2026-08-23 19:06:27,060 ] root - ERROR - Error during model registration: Unable to find a logged_model with artifact_path model under run 1bbab8d26d7c469cafc8feebe4d99a6f
+[ 2026-08-23 19:06:27,061 ] root - ERROR - Failed to complete the model registration process: Unable to find a logged_model with artifact_path model under run 1bbab8d26d7c469cafc8feebe4d99a6f
