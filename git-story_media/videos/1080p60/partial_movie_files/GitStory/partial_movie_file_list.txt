@@ -1,0 +1,11 @@
+# This file is used internally by FFMPEG.
+file 'file:/Users/anurag_77y/MLOPs-capstone-project/git-story_media/videos/1080p60/partial_movie_files/GitStory/1041589386_3252450611_877267901.mp4'
+file 'file:/Users/anurag_77y/MLOPs-capstone-project/git-story_media/videos/1080p60/partial_movie_files/GitStory/1671456864_1013037360_2233041070.mp4'
+file 'file:/Users/anurag_77y/MLOPs-capstone-project/git-story_media/videos/1080p60/partial_movie_files/GitStory/1373358843_2973622204_968834567.mp4'
+file 'file:/Users/anurag_77y/MLOPs-capstone-project/git-story_media/videos/1080p60/partial_movie_files/GitStory/1373358843_1424535575_4201445741.mp4'
+file 'file:/Users/anurag_77y/MLOPs-capstone-project/git-story_media/videos/1080p60/partial_movie_files/GitStory/1373358843_4019627423_1297961937.mp4'
+file 'file:/Users/anurag_77y/MLOPs-capstone-project/git-story_media/videos/1080p60/partial_movie_files/GitStory/2705804091_589339860_1084518211.mp4'
+file 'file:/Users/anurag_77y/MLOPs-capstone-project/git-story_media/videos/1080p60/partial_movie_files/GitStory/3320544385_589339860_1084518211.mp4'
+file 'file:/Users/anurag_77y/MLOPs-capstone-project/git-story_media/videos/1080p60/partial_movie_files/GitStory/2151775464_589339860_1084518211.mp4'
+file 'file:/Users/anurag_77y/MLOPs-capstone-project/git-story_media/videos/1080p60/partial_movie_files/GitStory/1144173099_2471182053_2029051679.mp4'
+file 'file:/Users/anurag_77y/MLOPs-capstone-project/git-story_media/videos/1080p60/partial_movie_files/GitStory/1144173099_2669282904_3364626460.mp4'

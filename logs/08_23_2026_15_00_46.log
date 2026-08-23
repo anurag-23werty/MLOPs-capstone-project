@@ -1,0 +1,3 @@
+[ 2026-08-23 15:00:46,746 ] root - INFO - Data loaded from /Users/anurag_77y/MLOPs-capstone-project/notebooks/IMDB.csv
+[ 2026-08-23 15:00:46,746 ] root - INFO - pre-processing...
+[ 2026-08-23 15:00:46,749 ] root - INFO - Data preprocessing completed
