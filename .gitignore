@@ -1,0 +1,5 @@
+.env
+.pytype/
+cython_debug/
+.pypirc
+notebooks/
