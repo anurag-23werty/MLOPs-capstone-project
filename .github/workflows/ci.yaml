@@ -32,6 +32,7 @@ jobs:
           CAPSTONE_TEST: ${{ secrets.CAPSTONE_TEST }}
           ACCESS_KEY: ${{ secrets.ACCESS_KEY }}
           SECRET_KEY: ${{ secrets.SECRET_KEY }}
+          TRACKING_URI: ${{ secrets.TRACKING_URI }}
           AWS_DEFAULT_REGION: us-east-1
         run: |
           dvc repro
