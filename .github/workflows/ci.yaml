@@ -7,10 +7,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: checkout code
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: setup python
+      - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
@@ -23,11 +23,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pip-
 
-      - name: install dependencies
+      - name: Install dependencies
         run: |
           pip install -r requirements.txt
 
-      - name: run pipeline
+      - name: Run DVC pipeline
         env:
           CAPSTONE_TEST: ${{ secrets.CAPSTONE_TEST }}
           ACCESS_KEY: ${{ secrets.ACCESS_KEY }}
@@ -38,6 +38,7 @@ jobs:
           dvc repro
 
       - name: Run model tests
+        if: success()
         env:
           CAPSTONE_TEST: ${{ secrets.CAPSTONE_TEST }}
         run: |
@@ -56,3 +57,38 @@ jobs:
           CAPSTONE_TEST: ${{ secrets.CAPSTONE_TEST }}
         run: |
           python -m unittest tests/test_flask_app.py
+
+      - name: Configure AWS credentials
+        if: success()
+        run: |
+          aws configure set aws_access_key_id "${{ secrets.ACCESS_KEY }}"
+          aws configure set aws_secret_access_key "${{ secrets.SECRET_KEY }}"
+          aws configure set region "${{ secrets.AWS_REGION }}"
+
+      - name: Login to AWS ECR
+        if: success()
+        run: |
+          aws ecr get-login-password \
+            --region "${{ secrets.AWS_REGION }}" \
+            | docker login \
+            --username AWS \
+            --password-stdin \
+            "${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com"
+
+      - name: Build Docker image
+        if: success()
+        run: |
+          docker build -t "${{ secrets.ECR_REPOSITORY }}:latest" .
+
+      - name: Tag Docker image
+        if: success()
+        run: |
+          docker tag \
+            "${{ secrets.ECR_REPOSITORY }}:latest" \
+            "${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/${{ secrets.ECR_REPOSITORY }}:latest"
+
+      - name: Push Docker image to ECR
+        if: success()
+        run: |
+          docker push \
+            "${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/${{ secrets.ECR_REPOSITORY }}:latest"
