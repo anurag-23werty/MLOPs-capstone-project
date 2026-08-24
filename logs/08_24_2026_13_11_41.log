@@ -1,0 +1,7 @@
+[ 2026-08-24 13:11:43,153 ] httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2026-08-24 13:11:43,167 ] dagshub - INFO - Accessing as anurag-23werty
+[ 2026-08-24 13:11:44,291 ] httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/anurag-23werty/MLOPs-capstone-project "HTTP/1.1 200 OK"
+[ 2026-08-24 13:11:45,299 ] httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2026-08-24 13:11:45,302 ] dagshub - INFO - Initialized MLflow to track repo "anurag-23werty/MLOPs-capstone-project"
+[ 2026-08-24 13:11:45,303 ] dagshub - INFO - Repository anurag-23werty/MLOPs-capstone-project initialized!
+[ 2026-08-24 13:11:45,304 ] root - INFO - Registering model from: models:/m-25bae6cf1bb7422f82778ff84617e790

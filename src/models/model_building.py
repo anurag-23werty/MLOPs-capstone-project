@@ -22,7 +22,7 @@ def load_data(file_path: str) -> pd.DataFrame:
 def train_model(X_train: np.ndarray, y_train: np.ndarray) -> LogisticRegression:
     """Train the Logistic Regression model."""
     try:
-        clf = LogisticRegression(C=1, solver='liblinear', penalty='l1')
+        clf = LogisticRegression(C=1, solver='liblinear', penalty='l1',max_iter=1000)
         clf.fit(X_train, y_train)
         logging.info('Model training completed')
         return clf
@@ -35,6 +35,7 @@ def save_model(model, file_path: str) -> None:
     try:
         with open(file_path, 'wb') as file:
             pickle.dump(model, file)
+        print("Number of features:", model.n_features_in_)
         logging.info('Model saved to %s', file_path)
     except Exception as e:
         logging.error('Error occurred while saving the model: %s', e)
@@ -44,6 +45,7 @@ def main():
     try:
 
         train_data = load_data('./data/processed/train_bow.csv')
+        print(train_data.shape)
         X_train = train_data.iloc[:, :-1].values
         y_train = train_data.iloc[:, -1].values
 

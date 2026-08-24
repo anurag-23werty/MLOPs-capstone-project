@@ -68,7 +68,9 @@ def save_data(train_data: pd.DataFrame, test_data: pd.DataFrame, data_path: str)
         raise
 def main():
     try:
-        test_size = 0.2
+        params = load_params(params_path="params.yaml")
+        test_size = params['data_ingestion']['test_size']
+        # test_size = 0.2
         # df = load_data("/Users/anurag_77y/MLOPs-capstone-project/notebooks/IMDB.csv")
         s3 = s3_connection.s3_operations("mlopsimdb",ACCESS_KEY,SECRET_KEY)
         df = s3.fetch_file_from_s3("data/raw/IMDB.csv")

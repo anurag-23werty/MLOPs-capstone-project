@@ -1,0 +1,12 @@
+[ 2026-08-24 13:11:15,788 ] httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2026-08-24 13:11:15,802 ] dagshub - INFO - Accessing as anurag-23werty
+[ 2026-08-24 13:11:16,825 ] httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/anurag-23werty/MLOPs-capstone-project "HTTP/1.1 200 OK"
+[ 2026-08-24 13:11:17,813 ] httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2026-08-24 13:11:17,816 ] dagshub - INFO - Initialized MLflow to track repo "anurag-23werty/MLOPs-capstone-project"
+[ 2026-08-24 13:11:17,817 ] dagshub - INFO - Repository anurag-23werty/MLOPs-capstone-project initialized!
+[ 2026-08-24 13:11:19,901 ] root - INFO - Model loaded from ./models/model.pkl
+[ 2026-08-24 13:11:19,966 ] root - INFO - Data loaded from ./data/processed/test_bow.csv
+[ 2026-08-24 13:11:19,982 ] root - INFO - Model evaluation metrics calculated
+[ 2026-08-24 13:11:19,983 ] root - INFO - Metrics saved to reports/metrics.json
+[ 2026-08-24 13:11:38,365 ] root - INFO - Model information saved to reports/experiment_info.json
+[ 2026-08-24 13:11:39,103 ] root - INFO - Model evaluation completed successfully
